@@ -1,0 +1,89 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-block-size: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  background: hsl(200, 15%, 93%);
+
+  /* parent owned aspects of the responsive stories */
+  & > .stories {
+    inline-size: 100vw;
+    block-size: 100vh;
+
+    box-shadow:
+      0 5px 2.5px hsl(200, 95%, 3% / .037)
+    ;
+
+    @media (hover: hover) {
+      border-radius: 3ch;
+    }
+
+    /* desktop constraint */
+    @media (hover: hover) and (min-width: 480px) {
+      max-inline-size: 425px;
+      max-block-size: 720px;
+    }
+
+    /* smaller desktop constraint */
+    @media (hover: hover) and (max-height: 880px) and (min-width: 720px) {
+      max-inline-size: 320px;
+      max-block-size: 568px;
+    }
+  }
+}
+/** Main Css ***/
+.stories {
+  display: grid;
+  grid: 1fr / auto-flow 100%;
+  gap: 1ch;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior: contain;
+  touch-action: pan-x;
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 0;
+    border: 1px solid #d5d5d5;
+  }
+  
+  &::-webkit-scrollbar-track {
+    border-radius: 0;
+    height: 2px;
+    background: #eeeeee;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    width: 2px;
+    border-radius: 0;
+    background: #b0b0b0;
+  }
+}
+
+.user {
+  display: grid;
+  grid: [story] 1fr / [story] 1fr;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.story {
+  grid-area: story;
+
+  background-size: cover;
+  background-image: linear-gradient(to top, lch(98 0 0), lch(90 0 0));
+
+  user-select: none;
+  touch-action: manipulation;
+  transition: opacity .3s cubic-bezier(0.4, 0.0, 1, 1);
+
+  &.seen {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
