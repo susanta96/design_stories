@@ -13,4 +13,5 @@ Passionate #FrontEnd/UX Developer, #Flutter #CSS Enthusiast.
 # Donate
 
 > If you found this project helpful or you learned something from the source code and want to thank me, consider buying me a beer:
+>
 <a href="https://www.buymeacoffee.com/susanta96"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a beer&emoji=🍺&slug=susanta96&button_colour=FF5F5F&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
