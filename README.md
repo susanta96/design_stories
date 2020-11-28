@@ -1,6 +1,7 @@
 ### Design Stories in the Web
 This is a small design practice of new css grid features without z-index as well as sroll snap.
 
+![UserStories](stories.gif)
 ### Susanta Chakraborty
  
 Passionate #FrontEnd/UX Developer, #Flutter #CSS Enthusiast.
